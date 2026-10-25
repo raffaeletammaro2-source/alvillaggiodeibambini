@@ -318,13 +318,16 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
         </div>
       </div>
 
-      <form id="quote" class="gform-main" novalidate aria-label="Richiesta preventivo">
+      <form id="quote" name="preventivo" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" class="gform-main" novalidate aria-label="Richiesta preventivo">
+        <input type="hidden" name="form-name" value="preventivo">
+        <input type="hidden" name="data_evento" id="f-data">
+        <p hidden><label>Non compilare: <input name="bot-field"></label></p>
         <div>
           <h3 style="font-weight:600;font-size:24px;color:#174e4a;margin:0 0 18px">I tuoi dati</h3>
           <div class="gform">
             <div class="field"><label for="f-nome">Nome e cognome *</label><input class="input" id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Es. Maria Rossi" required><span class="err" id="e-nome" hidden>Inserisci il tuo nome</span></div>
-            <div class="field"><label for="f-tel">Telefono / WhatsApp *</label><input class="input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="Es. 333 123 4567" required><span class="err" id="e-tel" hidden>Inserisci un numero valido</span></div>
-            <div class="field"><label for="f-email">Email</label><input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="nome@email.it"></div>
+            <div class="field"><label for="f-tel">Telefono / WhatsApp *</label><input class="input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="Es. 333 123 4567" required><span class="err" id="e-tel" hidden>Inserisci un numero di telefono valido</span></div>
+            <div class="field"><label for="f-email">Email <span style="font-weight:600;color:#4d615e">(facoltativa)</span></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="nome@email.it"></div>
             <div class="field"><label for="f-fest">Nome del festeggiato</label><input class="input" id="f-fest" name="festeggiato" type="text" placeholder="Es. Sofia"></div>
             <div class="field"><label for="f-eta">Anni che compie</label><input class="input" id="f-eta" name="eta" type="number" min="0" max="18" inputmode="numeric" placeholder="Es. 5"></div>
             <div class="field"><label for="f-fascia">Fascia oraria preferita</label><select class="input" id="f-fascia" name="fascia"><option value="">Seleziona</option><option>Mattina</option><option>Pomeriggio</option><option>Sera</option><option>Indifferente</option></select></div>
@@ -356,7 +359,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
           <span class="err" id="e-date" hidden style="display:block;margin-top:10px;font-size:14px">Scegli la data dell'evento dal calendario</span>
 
           <label style="display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:14px;cursor:pointer">
-            <input type="checkbox" id="f-privacy" style="width:22px;height:22px;margin:1px 0 0;accent-color:#217c73;flex:0 0 22px">
+            <input type="checkbox" id="f-privacy" name="privacy" value="Accettata" style="width:22px;height:22px;margin:1px 0 0;accent-color:#217c73;flex:0 0 22px">
             <span>Acconsento al trattamento dei dati per ricevere il preventivo, come indicato nella <a href="#privacy">privacy policy</a>. *</span>
           </label>
           <span class="err" id="e-privacy" hidden style="display:block;margin-top:6px">Serve il consenso per inviarti il preventivo</span>
@@ -523,7 +526,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var okNome = !!val('f-nome');
-    var okTel = val('f-tel').replace(/\D/g, '').length >= 6;
+    var okTel = val('f-tel').replace(/\D/g, '').length >= 8;
     var okDate = !!selected;
     var okPriv = document.getElementById('f-privacy').checked;
     showErr('e-nome', !okNome, 'f-nome');
@@ -547,6 +550,18 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
     if (val('f-fascia')) L.push('Fascia oraria: ' + val('f-fascia'));
     if (val('f-note')) { L.push(''); L.push('Note: ' + val('f-note')); }
     var link = waUrl(L.join('\n'));
+
+    // invio a Netlify Forms -> notifica email
+    document.getElementById('f-data').value = fmt(selected);
+    try {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+        keepalive: true
+      });
+    } catch (err) {}
+
     document.getElementById('retry').href = link;
     window.open(link, '_blank', 'noopener');
     form.hidden = true;
