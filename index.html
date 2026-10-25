@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Villaggio dei Bambini – Sala feste per bambini a Mugnano-Giugliano</title>
+<meta name="description" content="Sala feste per bambini da 450 mq: area interna climatizzata, playground da 130 m³, garden di 230 mq e zona adulti. Feste a tema, mascotte, gonfiabili e animazione. Richiedi il preventivo su WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Al Villaggio dei Bambini – Sala feste per bambini">
+<meta property="og:description" content="450 mq di gioco, comfort e spazi all'aperto per compleanni da ricordare. Richiedi il preventivo gratuito.">
+<meta property="og:image" content="img/og-image.jpg">
+<meta name="theme-color" content="#174e4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 42'%3E%3Ccircle cx='14' cy='26' r='11' fill='%23ffc93c'/%3E%3Ccircle cx='28' cy='27' r='10' fill='%23217c73'/%3E%3Ccircle cx='22' cy='13' r='9' fill='%23e2367a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#faf8f2;font-family:'Nunito',system-ui,sans-serif;color:#34484b;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:#217c73}a:hover{color:#174e4a}
+img{max-width:100%}
+h1,h2,h3{font-family:'Fredoka',sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.gform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.gform-main{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:start}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:14px;grid-auto-flow:dense}
+.s2c{grid-column:span 2}.s2r{grid-row:span 2}
+.gal figure{margin:0;border-radius:22px;overflow:hidden;position:relative;background:#e4eee8}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gal figure:hover img{transform:scale(1.07)}
+.card{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(23,78,74,.35)}
+.btn{transition:transform .2s,box-shadow .2s,background-color .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-wa{color:#0b3d2e;background:#25d366}.btn-wa:hover{color:#0b3d2e;background:#2ee07a}
+.btn-pri{color:#fff}.btn-pri:hover{color:#fff;filter:brightness(.93)}
+.btn-ghost{color:#fff}.btn-ghost:hover{color:#174e4a;background:#fff}
+.nav-link{color:#174e4a;text-decoration:none;font-weight:700;font-size:15px;padding:10px 4px}
+.nav-link:hover{color:#217c73}
+.ball{position:absolute;border-radius:50%;background-image:radial-gradient(circle at 32% 28%,rgba(255,255,255,.75) 0,rgba(255,255,255,0) 38%);box-shadow:inset -6px -8px 14px rgba(0,0,0,.12);pointer-events:none}
+.hero-h1{font-size:72px}
+.hero-scrim{background:linear-gradient(90deg,rgba(23,78,74,.94) 0%,rgba(23,78,74,.72) 42%,rgba(23,78,74,.12) 78%,rgba(23,78,74,0) 100%)}
+.eyebrow{margin:0 0 12px;color:#217c73;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.sec-h2{font-weight:700;font-size:48px;line-height:1.08;color:#174e4a;margin:0 0 16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:800;font-size:14px;color:#174e4a}
+.input{width:100%;min-height:50px;padding:12px 14px;border-radius:14px;font:inherit;font-size:16px;color:#174e4a;background:#fff;border:2px solid #d4e2dc}
+.input.invalid{border-color:#b4134f}
+textarea.input{resize:vertical}
+.err{color:#b4134f;font-size:13px;font-weight:700}
+.input:focus{outline:3px solid rgba(33,124,115,.35);outline-offset:1px;border-color:#217c73}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ffc93c;outline-offset:3px}
+[hidden]{display:none !important}
+
+/* calendario */
+.cal-nav{width:44px;height:44px;border-radius:12px;border:0;background:#fff;color:#174e4a;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:inset 0 0 0 1px #d4e2dc}
+.cal-nav:disabled{color:#c3ccc9;cursor:not-allowed}
+.cal-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{position:relative;width:100%;aspect-ratio:1/1;min-height:40px;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;background:#fff;color:#174e4a;cursor:pointer;box-shadow:inset 0 0 0 1px #d4e2dc;transition:transform .15s,background-color .2s}
+.day:hover:not(:disabled){transform:scale(1.06)}
+.day.we{color:#c81f63}
+.day.today{box-shadow:inset 0 0 0 2px #ffc93c}
+.day:disabled{background:transparent;color:#b3bfbb;cursor:not-allowed;box-shadow:none}
+.day.sel{background:#217c73;color:#fff;transform:scale(1.06);box-shadow:0 8px 18px -8px rgba(33,124,115,.8)}
+
+/* FAQ */
+.faq{background:#fff;border-radius:20px;border:1px solid #e4eee8;overflow:hidden}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;font-family:'Fredoka',sans-serif;font-weight:600;font-size:20px;color:#174e4a;min-height:64px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .ic{flex:0 0 36px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s,background-color .3s;background:#e4eee8;color:#217c73}
+.faq[open] .ic{transform:rotate(45deg);background:#e2367a;color:#fff}
+.faq p{margin:0;padding:0 22px 22px;font-size:17px}
+
+/* animazioni */
+@keyframes reveal{from{clip-path:circle(0% at 70% 55%)}to{clip-path:circle(140% at 70% 55%)}}
+@keyframes kb{from{transform:scale(1.22)}to{transform:scale(1.04)}}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{opacity:0;transform:scale(.4)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes bob{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,-24px)}}
+@keyframes bob2{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-8px,-16px) rotate(8deg)}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}100%{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+@keyframes cue{0%{transform:translateY(0);opacity:1}100%{transform:translateY(14px);opacity:0}}
+@keyframes px{to{transform:translateY(16%)}}
+@keyframes tilt{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-10px)}}
+@keyframes tilt2{0%,100%{transform:rotate(5deg) translateY(0)}50%{transform:rotate(3deg) translateY(-12px)}}
+.hero-img{animation:reveal 1.7s cubic-bezier(.7,0,.2,1) both,kb 10s ease-out both}
+.up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.pop{animation:pop .7s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.55s}.d2{animation-delay:.75s}.d3{animation-delay:.95s}.d4{animation-delay:1.15s}.d5{animation-delay:1.35s}.d6{animation-delay:1.55s}
+.ball{animation:bob 6s ease-in-out infinite}
+.ball.b2{animation:bob2 7.5s ease-in-out infinite}
+.mq{animation:mq 38s linear infinite}
+.fab{animation:ring 1.8s ease-out infinite}
+.arrow{animation:nudge 1.4s ease-in-out infinite}
+.cue{animation:cue 1.6s ease-in-out infinite}
+.tilt{animation:tilt 7s ease-in-out infinite}
+.tilt2{animation:tilt2 8s ease-in-out infinite}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@supports (animation-timeline: scroll()){.hero-px{animation:px linear both;animation-timeline:scroll(root);animation-range:0 900px}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:1080px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.gform-main{grid-template-columns:minmax(0,1fr)}.hero-h1{font-size:58px}}
+@media (max-width:900px){
+  .g2{grid-template-columns:minmax(0,1fr);gap:40px}
+  .nav-links{display:none !important}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px}
+  .hero-scrim{background:linear-gradient(0deg,rgba(23,78,74,.96) 0%,rgba(23,78,74,.78) 55%,rgba(23,78,74,.25) 100%)}
+  .sala-collage{min-height:480px !important}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .g4,.gform{grid-template-columns:minmax(0,1fr)}
+  .hero-h1{font-size:42px}
+  .sec-h2{font-size:34px}
+  .nav-cta-label{display:none}
+  .form-card{padding:20px !important}
+  .cta-box{padding:44px 24px !important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(250,248,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #e4eee8">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px">
+    <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#174e4a">
+      <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle cx="14" cy="26" r="11" fill="#ffc93c"/><circle cx="28" cy="27" r="10" fill="#217c73"/><circle cx="22" cy="13" r="9" fill="#e2367a"/><circle cx="11" cy="22" r="3" fill="#fff" opacity=".7"/></svg>
+      <span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:21px;line-height:1.05">Al Villaggio<br><span style="font-weight:500;font-size:16px;color:#217c73">dei Bambini</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Sezioni" style="display:flex;gap:26px;align-items:center">
+      <a class="nav-link" href="#sala">La sala</a>
+      <a class="nav-link" href="#servizi">Servizi</a>
+      <a class="nav-link" href="#adulti">Area adulti</a>
+      <a class="nav-link" href="#galleria">Galleria</a>
+      <a class="nav-link" href="#preventivo">Preventivo</a>
+    </nav>
+    <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:999px;min-height:46px;font-size:15px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+      <span class="nav-cta-label">Scrivici su WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="top" style="position:relative;min-height:800px;overflow:hidden;background:#174e4a;display:flex;align-items:center">
+  <div class="hero-px" style="position:absolute;inset:0">
+    <img class="hero-img" src="img/esterno.jpg" alt="La facciata di Al Villaggio dei Bambini con il grande giardino in erba sintetica recintato" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%">
+  </div>
+  <div class="hero-scrim" style="position:absolute;inset:0"></div>
+  <span class="ball" aria-hidden="true" style="width:74px;height:74px;background-color:#ffc93c;top:120px;right:9%"></span>
+  <span class="ball b2" aria-hidden="true" style="width:46px;height:46px;background-color:#e2367a;top:260px;right:22%;animation-delay:-2s"></span>
+  <span class="ball" aria-hidden="true" style="width:58px;height:58px;background-color:#3cc8bd;bottom:150px;right:6%;animation-delay:-3.5s"></span>
+  <span class="ball b2" aria-hidden="true" style="width:34px;height:34px;background-color:#ff7a29;bottom:230px;right:30%;animation-delay:-1s"></span>
+  <span class="ball" aria-hidden="true" style="width:28px;height:28px;background-color:#8bd94a;top:90px;left:46%;animation-delay:-4s"></span>
+
+  <div class="wrap" style="position:relative;width:100%;padding-top:90px;padding-bottom:130px">
+    <div style="max-width:660px;color:#fff">
+      <p class="up d1" style="display:inline-flex;align-items:center;gap:8px;margin:0 0 22px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        Sala feste per bambini · Via Mugnano-Giugliano, 17
+      </p>
+      <h1 class="hero-h1 up d2" style="font-weight:700;line-height:1.02;margin:0 0 22px;letter-spacing:-.01em">La festa che i bambini <span style="color:#ffc93c">ricorderanno.</span> Il comfort che i grandi <span style="color:#7fe3d8">meritano.</span></h1>
+      <p class="up d3" style="font-size:20px;line-height:1.55;margin:0 0 34px;color:#e9f5f1;max-width:560px">450 mq tra sala climatizzata, playground da 130 m³ e garden all'aperto. Tu scegli la data, al resto pensiamo noi: tema, animazione, mascotte e gonfiabili.</p>
+      <div class="up d4" style="display:flex;flex-wrap:wrap;gap:14px">
+        <a class="btn btn-pri" href="#preventivo" style="display:inline-flex;align-items:center;gap:10px;background:#e2367a;text-decoration:none;font-weight:800;padding:17px 28px;border-radius:999px;font-size:17px;box-shadow:0 12px 28px -10px rgba(226,54,122,.7)">
+          Richiedi il preventivo gratuito
+          <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" data-wa href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,.7);text-decoration:none;font-weight:800;padding:15px 26px;border-radius:999px;font-size:17px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          Chiedi su WhatsApp
+        </a>
+      </div>
+      <div class="stats" style="margin-top:52px;max-width:640px">
+        <div class="pop d3" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px;backdrop-filter:blur(6px)"><div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#ffc93c">450 mq</div><div style="font-size:13px;font-weight:700;color:#e9f5f1;margin-top:6px">spazi complessivi</div></div>
+        <div class="pop d4" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px;backdrop-filter:blur(6px)"><div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#7fe3d8">220 mq</div><div style="font-size:13px;font-weight:700;color:#e9f5f1;margin-top:6px">area interna climatizzata</div></div>
+        <div class="pop d5" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px;backdrop-filter:blur(6px)"><div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#b5ef7d">230 mq</div><div style="font-size:13px;font-weight:700;color:#e9f5f1;margin-top:6px">area garden all'aperto</div></div>
+        <div class="pop d6" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px;backdrop-filter:blur(6px)"><div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:30px;line-height:1;color:#ffb3d1">130 m³</div><div style="font-size:13px;font-weight:700;color:#e9f5f1;margin-top:6px">di playground</div></div>
+      </div>
+    </div>
+  </div>
+  <a href="#sala" aria-label="Scorri alla sezione La sala" style="position:absolute;left:50%;bottom:96px;transform:translateX(-50%);width:30px;height:48px;border:2px solid rgba(255,255,255,.7);border-radius:20px;display:flex;justify-content:center;padding-top:8px">
+    <span class="cue" style="width:6px;height:10px;border-radius:4px;background:#fff;display:block"></span>
+  </a>
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:0;bottom:-1px;width:100%;height:80px;display:block"><path d="M0 40 C 180 90 360 0 540 30 S 900 90 1080 40 S 1320 10 1440 40 L1440 80 L0 80 Z" fill="#faf8f2"/></svg>
+</section>
+
+<!-- MARQUEE -->
+<div style="overflow:hidden;padding:6px 0 26px" aria-hidden="true">
+  <div class="mq" style="display:flex;width:max-content">
+    <div class="mq-row" style="display:flex;gap:40px;padding-right:40px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;color:#174e4a;white-space:nowrap">
+      <span>Feste a tema</span><span style="color:#e2367a">●</span><span>Mascotte</span><span style="color:#ffc93c">●</span><span>Gonfiabili</span><span style="color:#217c73">●</span><span>Animazione</span><span style="color:#ff7a29">●</span><span>Area climatizzata</span><span style="color:#e2367a">●</span><span>Garden 230 mq</span><span style="color:#ffc93c">●</span><span>Zona adulti</span><span style="color:#217c73">●</span><span>Playground 130 m³</span><span style="color:#ff7a29">●</span>
+    </div>
+  </div>
+</div>
+
+<!-- LA SALA -->
+<section id="sala" style="padding:70px 0 110px">
+  <div class="wrap g2">
+    <div class="rv sala-collage" style="position:relative;min-height:560px">
+      <img src="img/sala-tavoli.jpg" alt="La sala interna luminosa con tavolini colorati e il playground sullo sfondo" loading="lazy" style="width:82%;height:520px;object-fit:cover;border-radius:32px;display:block;box-shadow:0 30px 60px -30px rgba(23,78,74,.45)">
+      <div class="tilt" style="position:absolute;right:0;top:40px;width:42%;border:8px solid #fff;border-radius:26px;overflow:hidden;box-shadow:0 20px 40px -18px rgba(23,78,74,.45)"><img src="img/ufo.jpg" alt="Lo scivolo a capsula arancione del playground" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block"></div>
+      <div class="tilt2" style="position:absolute;right:6%;bottom:0;width:46%;border:8px solid #fff;border-radius:26px;overflow:hidden;box-shadow:0 20px 40px -18px rgba(23,78,74,.45)"><img src="img/playground-ingresso.jpg" alt="Ingresso del playground con piscina di palline" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block"></div>
+      <div style="position:absolute;left:-10px;bottom:30px;background:#ffc93c;color:#174e4a;border-radius:20px;padding:14px 18px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:18px;line-height:1.15;box-shadow:0 14px 30px -14px rgba(0,0,0,.35)">Climatizzata<br><span style="font-weight:500;font-size:15px">tutto l'anno</span></div>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">La sala</p>
+      <h2 class="sec-h2" style="margin-bottom:20px">Uno spazio pensato per giocare, festeggiare e stare bene insieme</h2>
+      <p style="margin:0 0 30px;font-size:18px">450 mq complessivi, con ambienti interni ed esterni progettati per accogliere i piccoli ospiti e le loro famiglie. Qui i bambini si scatenano, i grandi si rilassano: ogni compleanno diventa un'occasione speciale da vivere insieme.</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:0 0 48px;height:48px;border-radius:14px;background:#e4eee8;color:#217c73;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18M2 12h20"/></svg></span><div><strong style="color:#174e4a;font-size:18px">Area interna di 220 mq, climatizzata</strong><br>Fresca d'estate, calda d'inverno: la festa si fa in ogni stagione.</div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:0 0 48px;height:48px;border-radius:14px;background:#fde4ee;color:#c81f63;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="16" r="3"/><circle cx="15" cy="17" r="3"/><circle cx="12" cy="9" r="3"/><circle cx="18" cy="9" r="2"/></svg></span><div><strong style="color:#174e4a;font-size:18px">Grande playground da 130 m³</strong><br>Scivoli, piscina di palline, percorsi e tunnel su più livelli, con reti di protezione e pavimento morbido.</div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:0 0 48px;height:48px;border-radius:14px;background:#eaf7dc;color:#3f7a17;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21c0-9 5-15 15-17-1 10-7 15-15 17zM5 21l7-7"/></svg></span><div><strong style="color:#174e4a;font-size:18px">Area garden esterna di 230 mq</strong><br>Prato verde recintato per vivere la festa anche all'aperto.</div></div>
+        <div style="display:flex;gap:16px;align-items:flex-start"><span style="flex:0 0 48px;height:48px;border-radius:14px;background:#fff3d1;color:#9a6a00;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.3 0 4 1.4 4.5 4"/></svg></span><div><strong style="color:#174e4a;font-size:18px">Zona riservata agli adulti</strong><br>Genitori e accompagnatori passano il tempo in comodità, senza perdersi i momenti speciali.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIZI -->
+<section id="servizi" style="background:#e4eee8;padding:110px 0">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:720px;margin:0 auto 56px">
+      <p class="eyebrow">I nostri servizi</p>
+      <h2 class="sec-h2">Tutto quello che serve per una festa indimenticabile</h2>
+      <p style="margin:0;font-size:18px">Scegli i servizi che preferisci e componi la festa su misura per il tuo bambino.</p>
+    </div>
+    <div class="g4">
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#e2367a;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.1-5.4 3.1 1.3-6L3.3 9.2l6.1-.6z"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Feste a tema</h3><p style="margin:0;font-size:16px">Il tema preferito del festeggiato diventa colori, allestimento e dettagli coordinati in tutta la sala.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#ffc93c;color:#174e4a;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><circle cx="6" cy="5" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M9 12h.01M15 12h.01M9 16c1.7 1.4 4.3 1.4 6 0"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Mascotte</h3><p style="margin:0;font-size:16px">Il personaggio del cuore arriva alla festa per abbracci, foto ricordo e tante sorprese.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#217c73;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V11l3-3 3 3V7l3-4 3 4v4l3-3 3 3v10z"/><path d="M10 21v-4h4v4"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Gonfiabili</h3><p style="margin:0;font-size:16px">Strutture gonfiabili nel garden di 230 mq per saltare, ridere e scatenarsi all'aria aperta.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#ff7a29;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Animazione</h3><p style="margin:0;font-size:16px">Animatori che guidano giochi, balli di gruppo e attività pensate per l'età dei bambini.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#3cc8bd;color:#174e4a;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="9" rx="6" ry="7"/><path d="M11 16h2l-1 2zM12 18c0 2-2 2-2 4"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Allestimenti e palloncini</h3><p style="margin:0;font-size:16px">Archi di palloncini, nome del festeggiato e tavolo torta scenografico per foto da ricordare.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#c81f63;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16v-8H4z"/><path d="M4 16c2 1.5 4 1.5 6 0s4-1.5 6 0 3 1 4 0"/><path d="M12 13V9"/><path d="M12 6c-1 0-1.5-1-1-2l1-1 1 1c.5 1 0 2-1 2z"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Buffet e torta</h3><p style="margin:0;font-size:16px">Su richiesta pensiamo noi a merenda, buffet e torta, per piccoli e grandi ospiti.</p></article>
+      <article class="card rv" style="background:#fff;border-radius:26px;padding:28px 24px"><span style="width:58px;height:58px;border-radius:18px;background:#8bd94a;color:#174e4a;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2s-1-1.5-1-2.5S14 15 15 15h2a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.5" r="1"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#174e4a;margin:0 0 8px">Truccabimbi e baby dance</h3><p style="margin:0;font-size:16px">Facce dipinte, musica e coreografie semplici per far ballare anche i più timidi.</p></article>
+      <article class="card rv" style="background:#174e4a;color:#e9f5f1;border-radius:26px;padding:28px 24px;display:flex;flex-direction:column"><span style="width:58px;height:58px;border-radius:18px;background:rgba(255,255,255,.14);color:#ffc93c;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><h3 style="font-weight:600;font-size:23px;color:#fff;margin:0 0 8px">E molto altro</h3><p style="margin:0 0 18px;font-size:16px">Hai un'idea speciale? Raccontacela e costruiamo insieme la festa perfetta.</p><a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;text-decoration:none;padding:12px 18px;border-radius:999px;min-height:46px;font-size:15px">Parliamone su WhatsApp</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- AREA ADULTI -->
+<section id="adulti" style="background:#174e4a;color:#e9f5f1;padding:120px 0;position:relative;overflow:hidden">
+  <span class="ball" aria-hidden="true" style="width:220px;height:220px;background-color:#217c73;top:-80px;right:-60px;opacity:.6"></span>
+  <span class="ball b2" aria-hidden="true" style="width:60px;height:60px;background-color:#ffc93c;bottom:70px;left:46%"></span>
+  <div class="wrap g2" style="position:relative">
+    <div class="rv">
+      <p class="eyebrow" style="color:#ffc93c">Pensata anche per i grandi</p>
+      <h2 class="sec-h2" style="color:#fff;margin-bottom:20px">Mentre i bambini giocano, gli adulti si godono la festa</h2>
+      <p style="margin:0 0 28px;font-size:18px;color:#d6ebe5">Una zona riservata agli adulti, accogliente e climatizzata, dove genitori, nonni e accompagnatori possono sedersi, chiacchierare e condividere i momenti speciali della giornata. Nessuno resta in piedi in un angolo: la festa è bella per tutti.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px">
+        <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px">Tavoli e sedute comode</span>
+        <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px">Ambiente climatizzato</span>
+        <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px">Spazio separato dal gioco</span>
+        <span style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px">Buffet su richiesta</span>
+      </div>
+      <a class="btn" href="#preventivo" style="display:inline-flex;align-items:center;gap:10px;background:#ffc93c;color:#174e4a;text-decoration:none;font-weight:800;padding:16px 26px;border-radius:999px;font-size:17px">Verifica la disponibilità <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="rv" style="position:relative">
+      <img src="img/area-adulti.jpg" alt="Zona adulti con tavoli apparecchiati e persone sorridenti" loading="lazy" style="width:100%;height:560px;object-fit:cover;border-radius:32px;display:block;box-shadow:0 30px 60px -24px rgba(0,0,0,.5)">
+      <div style="position:absolute;left:-18px;bottom:34px;background:#fff;color:#174e4a;border-radius:20px;padding:16px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 36px -16px rgba(0,0,0,.45)">
+        <span style="width:44px;height:44px;border-radius:12px;background:#e4eee8;color:#217c73;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M19.1 6L4.9 18M2 12h20"/></svg></span>
+        <span style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:17px;line-height:1.2">Comfort per i grandi,<br>tutto l'anno</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section id="galleria" style="padding:110px 0">
+  <div class="wrap">
+    <div class="rv" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:36px">
+      <div style="max-width:620px"><p class="eyebrow">Galleria</p><h2 class="sec-h2" style="margin:0">Sorrisi veri, dal nostro playground</h2></div>
+      <a class="btn btn-pri" href="#preventivo" style="display:inline-flex;align-items:center;gap:10px;background:#217c73;text-decoration:none;font-weight:800;padding:15px 24px;border-radius:999px">Prenota la tua festa</a>
+    </div>
+    <div class="gal">
+      <figure class="s2c s2r rv"><img src="img/tre-bimbi.jpg" alt="Tre bambini giocano felici nella piscina di palline colorate" loading="lazy"></figure>
+      <figure class="s2r rv"><img src="img/bimba-palline.jpg" alt="Bambina sorridente tra le palline colorate" loading="lazy"></figure>
+      <figure class="s2r rv"><img src="img/festa-sofia.jpg" alt="Festa del primo compleanno con arco di palloncini rosa e azzurri e torta" loading="lazy"></figure>
+      <figure class="s2r rv"><img src="img/scivolo.jpg" alt="Scivolo azzurro e percorso morbido del playground" loading="lazy"></figure>
+      <figure class="s2r rv"><img src="img/bimbo-palline.jpg" alt="Bambino che ride nella piscina di palline" loading="lazy"></figure>
+      <figure class="rv"><img src="img/dettaglio-rete.jpg" alt="Dettaglio colorato della struttura gioco vista attraverso la rete" loading="lazy"></figure>
+      <figure class="rv"><img src="img/ufo.jpg" alt="Capsula arancione e reti di protezione del playground" loading="lazy"></figure>
+      <figure class="s2c rv"><img src="img/playground-ingresso.jpg" alt="Ingresso del playground con insegna Al Villaggio dei Bambini" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PREVENTIVO -->
+<section id="preventivo" style="background:#e4eee8;padding:110px 0;position:relative;overflow:hidden">
+  <span class="ball" aria-hidden="true" style="width:120px;height:120px;background-color:#ffc93c;top:60px;left:-40px;opacity:.9"></span>
+  <span class="ball b2" aria-hidden="true" style="width:70px;height:70px;background-color:#e2367a;bottom:80px;right:3%"></span>
+  <div class="wrap" style="position:relative">
+    <div class="rv" style="text-align:center;max-width:720px;margin:0 auto 48px">
+      <p class="eyebrow" style="color:#c81f63">Preventivo gratuito e senza impegno</p>
+      <h2 class="sec-h2">Blocca la tua data: raccontaci la festa che sogni</h2>
+      <p style="margin:0;font-size:18px">I weekend sono i più richiesti: scegli la data dell'evento e ti confermiamo subito la disponibilità.</p>
+    </div>
+
+    <div class="form-card" style="background:#fff;border-radius:32px;padding:34px;box-shadow:0 40px 80px -40px rgba(23,78,74,.35)">
+      <div id="sent" hidden style="text-align:center;padding:40px 10px">
+        <span class="pop" style="width:84px;height:84px;border-radius:50%;background:#25d366;color:#0b3d2e;display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>
+        <h3 style="font-weight:700;font-size:34px;color:#174e4a;margin:0 0 10px">Ci siamo quasi!</h3>
+        <p style="margin:0 auto 24px;max-width:520px;font-size:18px">Si è aperta WhatsApp con la tua richiesta già compilata: premi <strong>Invia</strong> e ti risponderemo al più presto con il preventivo.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+          <a id="retry" class="btn btn-wa" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;padding:15px 24px;border-radius:999px">WhatsApp non si è aperto? Riprova</a>
+          <button id="edit" type="button" class="btn" style="background:#fff;border:2px solid #217c73;color:#217c73;font:inherit;font-weight:800;padding:13px 22px;border-radius:999px;font-size:16px">Modifica la richiesta</button>
+        </div>
+      </div>
+
+      <form id="quote" class="gform-main" novalidate aria-label="Richiesta preventivo">
+        <div>
+          <h3 style="font-weight:600;font-size:24px;color:#174e4a;margin:0 0 18px">I tuoi dati</h3>
+          <div class="gform">
+            <div class="field"><label for="f-nome">Nome e cognome *</label><input class="input" id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Es. Maria Rossi" required><span class="err" id="e-nome" hidden>Inserisci il tuo nome</span></div>
+            <div class="field"><label for="f-tel">Telefono / WhatsApp *</label><input class="input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="Es. 333 123 4567" required><span class="err" id="e-tel" hidden>Inserisci un numero valido</span></div>
+            <div class="field"><label for="f-email">Email</label><input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="nome@email.it"></div>
+            <div class="field"><label for="f-fest">Nome del festeggiato</label><input class="input" id="f-fest" name="festeggiato" type="text" placeholder="Es. Sofia"></div>
+            <div class="field"><label for="f-eta">Anni che compie</label><input class="input" id="f-eta" name="eta" type="number" min="0" max="18" inputmode="numeric" placeholder="Es. 5"></div>
+            <div class="field"><label for="f-fascia">Fascia oraria preferita</label><select class="input" id="f-fascia" name="fascia"><option value="">Seleziona</option><option>Mattina</option><option>Pomeriggio</option><option>Sera</option><option>Indifferente</option></select></div>
+            <div class="field"><label for="f-bimbi">Bambini previsti</label><input class="input" id="f-bimbi" name="bimbi" type="number" min="1" inputmode="numeric" placeholder="Es. 20"></div>
+            <div class="field"><label for="f-adulti">Adulti previsti</label><input class="input" id="f-adulti" name="adulti" type="number" min="0" inputmode="numeric" placeholder="Es. 25"></div>
+          </div>
+          <div class="field" style="margin-top:20px"><label for="f-note">Note o richieste particolari</label><textarea class="input" id="f-note" name="note" rows="3" placeholder="Tema desiderato, servizi che ti interessano, allergie, idee speciali..."></textarea></div>
+        </div>
+
+        <div style="background:#faf8f2;border-radius:26px;padding:24px;border:1px solid #e4eee8">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+            <span style="color:#217c73;display:flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+            <h3 style="font-weight:600;font-size:24px;color:#174e4a;margin:0">Qual è la data dell'evento? *</h3>
+          </div>
+          <p id="cal-hint" style="margin:0 0 16px;font-size:15px;color:#4d615e">Tocca un giorno nel calendario per scegliere la data della festa.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+            <button type="button" class="cal-nav" id="prev" aria-label="Mese precedente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <span id="month" aria-live="polite" style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:21px;color:#174e4a"></span>
+            <button type="button" class="cal-nav" id="next" aria-label="Mese successivo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+          <div class="cal-grid" aria-hidden="true" style="margin-bottom:6px;text-align:center;font-weight:800;font-size:13px;color:#4d615e"><span>Lun</span><span>Mar</span><span>Mer</span><span>Gio</span><span>Ven</span><span style="color:#c81f63">Sab</span><span style="color:#c81f63">Dom</span></div>
+          <div class="cal-grid" id="days"></div>
+
+          <div id="chosen" hidden style="display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:10px 10px 10px 14px;box-shadow:inset 0 0 0 1px #d4e2dc;margin-top:18px">
+            <span style="min-width:40px;height:32px;padding:0 10px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:#fff;background:#217c73">Data</span>
+            <span id="chosen-label" style="flex:1;font-weight:700;color:#174e4a;font-size:15px"></span>
+            <button type="button" id="clear" aria-label="Rimuovi la data scelta" style="width:44px;height:44px;border:0;border-radius:12px;background:#f3f6f4;color:#4d615e;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+          <span class="err" id="e-date" hidden style="display:block;margin-top:10px;font-size:14px">Scegli la data dell'evento dal calendario</span>
+
+          <label style="display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:14px;cursor:pointer">
+            <input type="checkbox" id="f-privacy" style="width:22px;height:22px;margin:1px 0 0;accent-color:#217c73;flex:0 0 22px">
+            <span>Acconsento al trattamento dei dati per ricevere il preventivo, come indicato nella <a href="#privacy">privacy policy</a>. *</span>
+          </label>
+          <span class="err" id="e-privacy" hidden style="display:block;margin-top:6px">Serve il consenso per inviarti il preventivo</span>
+
+          <button type="submit" class="btn btn-wa" style="margin-top:22px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;border:0;font:inherit;font-weight:800;padding:18px 24px;border-radius:999px;font-size:18px;box-shadow:0 14px 30px -12px rgba(37,211,102,.8)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            Invia richiesta di preventivo
+          </button>
+          <p style="margin:12px 0 0;font-size:13px;color:#4d615e;text-align:center">Si aprirà WhatsApp con il messaggio già pronto. Risposta rapida, nessun impegno.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:110px 0">
+  <div class="wrap" style="max-width:860px">
+    <div class="rv" style="text-align:center;margin-bottom:40px">
+      <p class="eyebrow">Domande frequenti</p>
+      <h2 class="sec-h2" style="font-size:44px;margin:0">Hai qualche dubbio? Ecco le risposte</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <details class="faq rv" open><summary>La sala è climatizzata?<span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sì: l'area interna di 220 mq è interamente climatizzata, così la festa è piacevole in ogni stagione.</p></details>
+      <details class="faq rv"><summary>Gli adulti dove possono stare?<span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Abbiamo una zona riservata agli adulti, dove genitori e accompagnatori possono sedersi comodamente e condividere la festa.</p></details>
+      <details class="faq rv"><summary>C'è uno spazio all'aperto?<span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Sì, un'area garden esterna di 230 mq, ideale per i gonfiabili e per vivere la festa all'aria aperta.</p></details>
+      <details class="faq rv"><summary>Posso scegliere tema, mascotte e animazione?<span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Certo: componi la festa scegliendo i servizi che preferisci. Scrivili nelle note del modulo e prepariamo una proposta su misura.</p></details>
+      <details class="faq rv"><summary>Come ricevo il preventivo?<span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Compila il modulo indicando la data dell'evento: si aprirà WhatsApp con il messaggio pronto da inviare e ti risponderemo con il preventivo.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINALE -->
+<section style="padding:0 0 110px">
+  <div class="wrap">
+    <div class="rv cta-box" style="position:relative;overflow:hidden;background:#e2367a;border-radius:36px;padding:64px 48px;color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
+      <span class="ball" aria-hidden="true" style="width:160px;height:160px;background-color:#ffc93c;right:-40px;top:-60px"></span>
+      <span class="ball b2" aria-hidden="true" style="width:70px;height:70px;background-color:#3cc8bd;right:22%;bottom:-24px"></span>
+      <div style="position:relative;max-width:640px">
+        <h2 class="sec-h2" style="color:#fff;font-size:46px;margin:0 0 12px">Il prossimo compleanno lo festeggiamo qui?</h2>
+        <p style="margin:0;font-size:19px;color:#ffe7f0">Scrivici ora: ti aiutiamo a scegliere data, tema e servizi in pochi messaggi.</p>
+      </div>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;padding:17px 26px;border-radius:999px;font-size:17px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>+39 393 530 9724</a>
+        <a class="btn" href="#preventivo" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#c81f63;font-weight:800;text-decoration:none;padding:17px 26px;border-radius:999px;font-size:17px">Compila il modulo</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#174e4a;color:#d6ebe5;padding:56px 0 110px">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px">
+    <div style="max-width:360px">
+      <div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:26px;color:#fff;margin-bottom:8px">Al Villaggio dei Bambini</div>
+      <p style="margin:0;font-size:15px">Sala per feste bambini: 450 mq di gioco, comfort e spazi all'aperto per compleanni da ricordare.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
+      <a href="https://www.google.com/maps/search/?api=1&query=Via%20Mugnano-Giugliano%2C%2017" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Via Mugnano-Giugliano, 17</a>
+      <a data-wa href="#" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp: +39 393 530 9724</a>
+      <a id="privacy" href="#privacy" style="color:#b9dcd3;font-size:14px">Privacy policy</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:#a9cfc6">© <span id="year"></span> Al Villaggio dei Bambini · Tutti i diritti riservati</div>
+</footer>
+
+<a class="fab btn" data-wa href="#" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;width:64px;height:64px;border-radius:50%;background:#25d366;color:#0b3d2e;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.35)">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2z"/></svg>
+</a>
+
+<script>
+(function () {
+  var WA = '393935309724';
+  var waUrl = function (t) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(t); };
+  var generic = waUrl('Ciao! Vorrei informazioni per organizzare una festa al Villaggio dei Bambini.');
+  document.querySelectorAll('[data-wa]').forEach(function (a) { a.href = generic; });
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // marquee: duplica la riga per lo scorrimento continuo
+  var row = document.querySelector('.mq-row');
+  row.parentNode.appendChild(row.cloneNode(true));
+
+  // comparsa allo scroll
+  document.documentElement.classList.add('js');
+  var rv = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    rv.forEach(function (el) { io.observe(el); });
+  } else { rv.forEach(function (el) { el.classList.add('in'); }); }
+
+  // FAQ: una aperta per volta
+  var faqs = document.querySelectorAll('details.faq');
+  faqs.forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; }); });
+  });
+
+  // calendario
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var iso = function (y, m, d) { return y + '-' + pad(m + 1) + '-' + pad(d); };
+  var fmt = function (k) {
+    var s = new Date(k + 'T12:00:00').toLocaleDateString('it-IT', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  };
+  var now = new Date();
+  var todayKey = iso(now.getFullYear(), now.getMonth(), now.getDate());
+  var y = now.getFullYear(), m = now.getMonth(), selected = null;
+  var days = document.getElementById('days');
+
+  function render() {
+    var first = new Date(y, m, 1);
+    var offset = (first.getDay() + 6) % 7;
+    var dim = new Date(y, m + 1, 0).getDate();
+    var ml = first.toLocaleDateString('it-IT', { month: 'long', year: 'numeric' });
+    document.getElementById('month').textContent = ml.charAt(0).toUpperCase() + ml.slice(1);
+    document.getElementById('prev').disabled = !(y > now.getFullYear() || (y === now.getFullYear() && m > now.getMonth()));
+    days.innerHTML = '';
+    for (var i = 0; i < offset; i++) days.appendChild(document.createElement('span'));
+    for (var d = 1; d <= dim; d++) {
+      var key = iso(y, m, d);
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'day'; b.textContent = d; b.dataset.key = key;
+      var wd = new Date(y, m, d).getDay();
+      if (wd === 0 || wd === 6) b.classList.add('we');
+      if (key === todayKey) b.classList.add('today');
+      if (key < todayKey) { b.disabled = true; b.setAttribute('aria-label', fmt(key) + ', non disponibile'); }
+      else b.setAttribute('aria-label', fmt(key));
+      if (key === selected) { b.classList.add('sel'); b.setAttribute('aria-pressed', 'true'); }
+      days.appendChild(b);
+    }
+    var chosen = document.getElementById('chosen');
+    chosen.hidden = !selected;
+    if (selected) document.getElementById('chosen-label').textContent = fmt(selected);
+    document.getElementById('cal-hint').textContent = selected
+      ? 'Perfetto! Per cambiarla tocca un altro giorno.'
+      : 'Tocca un giorno nel calendario per scegliere la data della festa.';
+  }
+  days.addEventListener('click', function (e) {
+    var b = e.target.closest('.day');
+    if (!b || b.disabled) return;
+    selected = selected === b.dataset.key ? null : b.dataset.key;
+    document.getElementById('e-date').hidden = true;
+    render();
+  });
+  document.getElementById('prev').addEventListener('click', function () { if (--m < 0) { m = 11; y--; } render(); });
+  document.getElementById('next').addEventListener('click', function () { if (++m > 11) { m = 0; y++; } render(); });
+  document.getElementById('clear').addEventListener('click', function () { selected = null; render(); });
+  render();
+
+  // modulo
+  var form = document.getElementById('quote');
+  var val = function (id) { return document.getElementById(id).value.trim(); };
+  var showErr = function (id, on, input) {
+    document.getElementById(id).hidden = !on;
+    if (input) document.getElementById(input).classList.toggle('invalid', on);
+  };
+  ['f-nome', 'f-tel'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', function () { showErr('e-' + id.slice(2), false, id); });
+  });
+  document.getElementById('f-privacy').addEventListener('change', function () { showErr('e-privacy', false); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var okNome = !!val('f-nome');
+    var okTel = val('f-tel').replace(/\D/g, '').length >= 6;
+    var okDate = !!selected;
+    var okPriv = document.getElementById('f-privacy').checked;
+    showErr('e-nome', !okNome, 'f-nome');
+    showErr('e-tel', !okTel, 'f-tel');
+    showErr('e-date', !okDate);
+    showErr('e-privacy', !okPriv);
+    if (!(okNome && okTel && okDate && okPriv)) {
+      var firstErr = form.querySelector('.err:not([hidden])');
+      if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    var L = ['Ciao! Vorrei un preventivo per una festa al Villaggio dei Bambini.', ''];
+    L.push('Nome: ' + val('f-nome'));
+    L.push('Telefono: ' + val('f-tel'));
+    if (val('f-email')) L.push('Email: ' + val('f-email'));
+    if (val('f-fest') || val('f-eta')) L.push('Festeggiato/a: ' + (val('f-fest') || '-') + (val('f-eta') ? ' (compie ' + val('f-eta') + ' anni)' : ''));
+    if (val('f-bimbi')) L.push('Bambini previsti: ' + val('f-bimbi'));
+    if (val('f-adulti')) L.push('Adulti previsti: ' + val('f-adulti'));
+    L.push('');
+    L.push("Data dell'evento: " + fmt(selected));
+    if (val('f-fascia')) L.push('Fascia oraria: ' + val('f-fascia'));
+    if (val('f-note')) { L.push(''); L.push('Note: ' + val('f-note')); }
+    var link = waUrl(L.join('\n'));
+    document.getElementById('retry').href = link;
+    window.open(link, '_blank', 'noopener');
+    form.hidden = true;
+    document.getElementById('sent').hidden = false;
+    document.getElementById('preventivo').scrollIntoView({ behavior: 'smooth' });
+  });
+  document.getElementById('edit').addEventListener('click', function () {
+    form.hidden = false;
+    document.getElementById('sent').hidden = true;
+  });
+})();
+</script>
+</body>
+</html>
