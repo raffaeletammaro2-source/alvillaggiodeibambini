@@ -1,6 +1,6 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-10-29 14:21:31",
+  "exportTime": "2026-10-29 16:01:35",
   "containerVersion": {
     "path": "accounts/0/containers/0/versions/0",
     "accountId": "0",
@@ -613,7 +613,7 @@
           {
             "type": "TEMPLATE",
             "key": "html",
-            "value": "<script>\nif (!window.__avbPixel) {\n  window.__avbPixel = true;\n  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\n  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\n  document,'script','https://connect.facebook.net/en_US/fbevents.js');\n  fbq('init', {{CONST - Meta Pixel ID}});\n  fbq('track', 'PageView');\n}\n</script>"
+            "value": "<script>\nif (!window.__avbPixel) {\n  window.__avbPixel = true;\n  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\n  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\n  document,'script','https://connect.facebook.net/en_US/fbevents.js');\n  fbq('set', 'autoConfig', false, {{CONST - Meta Pixel ID}});\n  fbq('init', {{CONST - Meta Pixel ID}});\n  fbq('track', 'PageView');\n}\n</script>"
           },
           {
             "type": "BOOLEAN",
