@@ -31,13 +31,17 @@ export default async (req, context) => {
 
   const { META_PIXEL_ID, META_CAPI_TOKEN, META_TEST_EVENT_CODE } = process.env;
   const version = process.env.META_API_VERSION || 'v23.0';
-  if (!META_PIXEL_ID || !META_CAPI_TOKEN) return json(500, { error: 'missing_configuration' });
+  if (!META_PIXEL_ID || !META_CAPI_TOKEN) {
+    console.error('Configurazione mancante: META_PIXEL_ID o META_CAPI_TOKEN non impostati');
+    return json(500, { error: 'missing_configuration' });
+  }
 
   // accetta solo richieste dal proprio sito
   const origin = req.headers.get('origin') || '';
   let host = '';
   try { host = new URL(origin).hostname; } catch (e) {}
   if (!(host.endsWith('alvillaggiodeibambini.it') || host.endsWith('.netlify.app'))) {
+    console.warn('Origine rifiutata:', origin || '(nessuna)');
     return json(403, { error: 'forbidden_origin' });
   }
 
@@ -82,5 +86,6 @@ export default async (req, context) => {
     console.error('Meta CAPI error', res.status, JSON.stringify(out));
     return json(502, { error: 'meta_error' });
   }
+  console.log(`OK ${event_name} inviato a Meta – events_received: ${out.events_received}${META_TEST_EVENT_CODE ? ' (test)' : ''}`);
   return json(200, { ok: true, events_received: out.events_received });
 };
