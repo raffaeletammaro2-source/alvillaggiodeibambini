@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+# non pubblicare come pagine statiche i file di servizio
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_tracking/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404"
+  status = 404
+  force = true

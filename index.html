@@ -3,6 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Consent Mode v2 + Google Tag Manager -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+  wait_for_update: 500
+});
+gtag('set', 'ads_data_redaction', true);
+gtag('set', 'url_passthrough', true);
+(function () {
+  var c = null;
+  try { c = JSON.parse(localStorage.getItem('avb_consent')); } catch (e) {}
+  // il consenso scade dopo 6 mesi
+  if (c && (!c.ts || Date.now() - c.ts > 180 * 864e5)) c = null;
+  window.__avbConsent = c;
+  if (c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  dataLayer.push({
+    consent_analytics: c && c.analytics ? 'granted' : 'denied',
+    consent_marketing: c && c.marketing ? 'granted' : 'denied'
+  });
+})();
+var GTM_ID = 'GTM-XXXXXXX'; // <-- ID del contenitore Google Tag Manager
+if (GTM_ID !== 'GTM-XXXXXXX') {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);
+}
+</script>
 <title>Al Villaggio dei Bambini – Sala feste per bambini a Mugnano-Giugliano</title>
 <meta name="description" content="Sala feste per bambini da 450 mq: area interna climatizzata, playground da 130 m³, garden di 230 mq e zona adulti. Feste a tema, mascotte, gonfiabili e animazione. Richiedi il preventivo su WhatsApp.">
 <meta property="og:type" content="website">
@@ -64,6 +99,25 @@ textarea.input{resize:vertical}
 .input:focus{outline:3px solid rgba(33,124,115,.35);outline-offset:1px;border-color:#217c73}
 button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ffc93c;outline-offset:3px}
 [hidden]{display:none !important}
+
+
+/* banner cookie */
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:70;display:flex;justify-content:center;pointer-events:none}
+.cookie-box{pointer-events:auto;position:relative;width:100%;max-width:760px;background:#fff;color:#34484b;border-radius:24px;padding:24px 26px;box-shadow:0 24px 60px -18px rgba(23,78,74,.5);border:1px solid #e4eee8;font-size:15px;line-height:1.55}
+.cookie-box h2{font-size:22px;color:#174e4a;margin:0 0 6px;font-weight:600}
+.cookie-box p{margin:0 0 16px}
+.cookie-x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:12px;background:transparent;color:#4d615e;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cookie-x:hover{background:#f3f6f4}
+.cookie-prefs{display:flex;flex-direction:column;gap:10px;margin:0 0 16px;padding:14px 16px;background:#faf8f2;border-radius:16px}
+.cookie-prefs label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.cookie-prefs input{width:20px;height:20px;margin:2px 0 0;accent-color:#217c73;flex:0 0 20px}
+.cookie-prefs small{display:block;color:#4d615e;font-size:13px}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.ck-btn{min-height:46px;padding:11px 22px;border-radius:999px;font:inherit;font-weight:800;font-size:15px;cursor:pointer;border:2px solid #174e4a}
+.ck-pri{background:#174e4a;color:#fff}
+.ck-sec{background:#fff;color:#174e4a}
+.ck-link{background:none;border:0;padding:0;font:inherit;color:#b9dcd3;font-size:14px;text-decoration:underline;cursor:pointer;text-align:left}
+@media (max-width:640px){.cookie{left:10px;right:10px;bottom:10px}.cookie-box{padding:20px 18px}.cookie-actions .ck-btn{flex:1 1 auto}}
 
 /* calendario */
 .cal-nav{width:44px;height:44px;border-radius:12px;border:0;background:#fff;color:#174e4a;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:inset 0 0 0 1px #d4e2dc}
@@ -137,6 +191,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
 </style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 
 <!-- NAV -->
 <header style="position:sticky;top:0;z-index:50;background:rgba(250,248,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #e4eee8">
@@ -401,7 +456,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
 </section>
 
 <!-- CTA FINALE -->
-<section style="padding:0 0 110px">
+<section id="contatti" style="padding:0 0 110px">
   <div class="wrap">
     <div class="rv cta-box" style="position:relative;overflow:hidden;background:#e2367a;border-radius:36px;padding:64px 48px;color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px">
       <span class="ball" aria-hidden="true" style="width:160px;height:160px;background-color:#ffc93c;right:-40px;top:-60px"></span>
@@ -429,7 +484,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
     <div style="display:flex;flex-direction:column;gap:10px;font-size:16px">
       <a href="https://www.google.com/maps/search/?api=1&query=Via%20Mugnano-Giugliano%2C%2017" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Via Mugnano-Giugliano, 17</a>
       <a data-wa href="#" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;display:flex;gap:10px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp: +39 393 530 9724</a>
-      <a id="privacy" href="#privacy" style="color:#b9dcd3;font-size:14px">Privacy policy</a>
+      <a id="privacy" href="#privacy" style="color:#b9dcd3;font-size:14px">Privacy e cookie policy</a>
+      <button type="button" id="cookie-open" class="ck-link">Preferenze cookie</button>
     </div>
   </div>
   <div class="wrap" style="margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:#a9cfc6">© <span id="year"></span> Al Villaggio dei Bambini · Tutti i diritti riservati</div>
@@ -439,6 +495,25 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
   <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-1-.4-1.8-1.2-2.2-2.2l.8-1-1-2z"/></svg>
 </a>
 
+<!-- BANNER COOKIE -->
+<div id="cookie" class="cookie" hidden>
+  <div class="cookie-box" role="dialog" aria-labelledby="cookie-t" aria-describedby="cookie-d">
+    <button type="button" class="cookie-x" id="ck-close" aria-label="Chiudi e continua senza accettare"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <h2 id="cookie-t">Usiamo i cookie</h2>
+    <p id="cookie-d">Usiamo cookie tecnici necessari al funzionamento del sito e, solo con il tuo consenso, cookie di statistica (Google Analytics) e di marketing (Meta) per capire come viene usato il sito e mostrarti pubblicità pertinenti. Puoi cambiare scelta in qualsiasi momento da “Preferenze cookie” in fondo alla pagina. <a href="#privacy">Cookie policy</a></p>
+    <div class="cookie-prefs" id="cookie-prefs" hidden>
+      <label><input type="checkbox" checked disabled><span><strong>Tecnici</strong> – sempre attivi<small>Necessari al funzionamento del sito.</small></span></label>
+      <label><input type="checkbox" id="ck-an"><span><strong>Statistica</strong><small>Google Analytics: visite e utilizzo del sito, in forma aggregata.</small></span></label>
+      <label><input type="checkbox" id="ck-mk"><span><strong>Marketing</strong><small>Meta (Facebook e Instagram): misurazione delle campagne e pubblicità personalizzata.</small></span></label>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="ck-btn ck-sec" id="ck-custom">Personalizza</button>
+      <button type="button" class="ck-btn ck-sec" id="ck-reject">Rifiuta</button>
+      <button type="button" class="ck-btn ck-pri" id="ck-accept">Accetta tutti</button>
+    </div>
+  </div>
+</div>
+
 <script>
 (function () {
   var WA = '393935309724';
@@ -446,6 +521,74 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
   var generic = waUrl('Ciao! Vorrei informazioni per organizzare una festa al Villaggio dei Bambini.');
   document.querySelectorAll('[data-wa]').forEach(function (a) { a.href = generic; });
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== TRACCIAMENTO (dataLayer -> Google Tag Manager) =====
+  var dl = window.dataLayer = window.dataLayer || [];
+  var uid = function () {
+    return window.crypto && crypto.randomUUID ? crypto.randomUUID()
+      : Date.now() + '-' + Math.random().toString(16).slice(2);
+  };
+  var track = function (name, params) {
+    var o = { event: name };
+    for (var k in params) o[k] = params[k];
+    dl.push(o);
+  };
+  var clean = function (t) { return (t || '').replace(/\s+/g, ' ').trim(); };
+  var whereIs = function (el) {
+    if (el.classList.contains('fab')) return 'pulsante_flottante';
+    if (el.closest('header')) return 'menu';
+    if (el.closest('footer')) return 'footer';
+    var sec = el.closest('section[id]');
+    if (!sec) return 'pagina';
+    return sec.id === 'top' ? 'hero' : sec.id;
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.hasAttribute('data-wa') || a.id === 'retry') {
+      track('whatsapp_click', { event_id: uid(), click_location: a.id === 'retry' ? 'modulo_riprova' : whereIs(a), link_text: clean(a.textContent) || 'icona' });
+    } else if (a.getAttribute('href') === '#preventivo') {
+      track('cta_click', { cta_text: clean(a.textContent), cta_location: whereIs(a) });
+    } else if ((a.href || '').indexOf('google.com/maps') > -1) {
+      track('directions_click', { click_location: whereIs(a) });
+    }
+  });
+
+  // ===== BANNER COOKIE =====
+  var ck = document.getElementById('cookie');
+  var ckPrefs = document.getElementById('cookie-prefs');
+  var ckCustom = document.getElementById('ck-custom');
+  var ckAn = document.getElementById('ck-an');
+  var ckMk = document.getElementById('ck-mk');
+  function saveConsent(an, mk) {
+    var c = { analytics: !!an, marketing: !!mk, ts: Date.now(), v: 1 };
+    try { localStorage.setItem('avb_consent', JSON.stringify(c)); } catch (e) {}
+    window.__avbConsent = c;
+    gtag('consent', 'update', {
+      analytics_storage: an ? 'granted' : 'denied',
+      ad_storage: mk ? 'granted' : 'denied',
+      ad_user_data: mk ? 'granted' : 'denied',
+      ad_personalization: mk ? 'granted' : 'denied'
+    });
+    track('consent_update', { consent_analytics: an ? 'granted' : 'denied', consent_marketing: mk ? 'granted' : 'denied' });
+    ck.hidden = true;
+  }
+  function openBanner(custom) {
+    var c = window.__avbConsent;
+    ckAn.checked = !!(c && c.analytics);
+    ckMk.checked = !!(c && c.marketing);
+    ckPrefs.hidden = !custom;
+    ckCustom.textContent = custom ? 'Salva scelte' : 'Personalizza';
+    ck.hidden = false;
+  }
+  document.getElementById('ck-accept').addEventListener('click', function () { saveConsent(true, true); });
+  document.getElementById('ck-reject').addEventListener('click', function () { saveConsent(false, false); });
+  document.getElementById('ck-close').addEventListener('click', function () { saveConsent(false, false); });
+  ckCustom.addEventListener('click', function () {
+    if (ckPrefs.hidden) openBanner(true); else saveConsent(ckAn.checked, ckMk.checked);
+  });
+  document.getElementById('cookie-open').addEventListener('click', function () { openBanner(true); });
+  if (!window.__avbConsent) openBanner(false);
 
   // marquee: duplica la riga per lo scorrimento continuo
   var row = document.querySelector('.mq-row');
@@ -464,7 +607,13 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
   // FAQ: una aperta per volta
   var faqs = document.querySelectorAll('details.faq');
   faqs.forEach(function (d) {
-    d.addEventListener('toggle', function () { if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; }); });
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      faqs.forEach(function (o) { if (o !== d) o.open = false; });
+      if (d.dataset.seen) return;
+      d.dataset.seen = '1';
+      track('faq_open', { faq_question: clean(d.querySelector('summary').textContent) });
+    });
   });
 
   // calendario
@@ -513,6 +662,10 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
     selected = selected === b.dataset.key ? null : b.dataset.key;
     document.getElementById('e-date').hidden = true;
     render();
+    if (selected) {
+      var diff = Math.round((new Date(selected + 'T12:00:00') - new Date(todayKey + 'T12:00:00')) / 864e5);
+      track('select_event_date', { event_date: selected, days_in_advance: diff });
+    }
   });
   document.getElementById('prev').addEventListener('click', function () { if (--m < 0) { m = 11; y--; } render(); });
   document.getElementById('next').addEventListener('click', function () { if (++m > 11) { m = 0; y++; } render(); });
@@ -530,6 +683,10 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
     document.getElementById(id).addEventListener('input', function () { showErr('e-' + id.slice(2), false, id); });
   });
   document.getElementById('f-privacy').addEventListener('change', function () { showErr('e-privacy', false); });
+  var started = false;
+  var startForm = function () { if (started) return; started = true; track('form_start', { form_name: 'preventivo' }); };
+  form.addEventListener('focusin', startForm);
+  days.addEventListener('click', startForm);
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -542,6 +699,9 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
     showErr('e-date', !okDate);
     showErr('e-privacy', !okPriv);
     if (!(okNome && okTel && okDate && okPriv)) {
+      var bad = [];
+      if (!okNome) bad.push('nome'); if (!okTel) bad.push('telefono'); if (!okDate) bad.push('data'); if (!okPriv) bad.push('privacy');
+      track('form_error', { form_name: 'preventivo', error_fields: bad.join(',') });
       var firstErr = form.querySelector('.err:not([hidden])');
       if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
@@ -569,6 +729,18 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ff
         keepalive: true
       });
     } catch (err) {}
+
+    // conversione: GA4 generate_lead + Meta Lead (Pixel + Conversions API, stesso event_id)
+    var parts = val('f-nome').split(/\s+/);
+    track('generate_lead', {
+      event_id: uid(),
+      form_name: 'preventivo',
+      event_date: selected,
+      time_slot: val('f-fascia') || 'non_indicata',
+      guests_children: parseInt(val('f-bimbi'), 10) || 0,
+      guests_adults: parseInt(val('f-adulti'), 10) || 0,
+      lead: { phone: val('f-tel'), email: val('f-email'), first_name: parts[0] || '', last_name: parts.slice(1).join(' ') }
+    });
 
     document.getElementById('retry').href = link;
     window.open(link, '_blank', 'noopener');
